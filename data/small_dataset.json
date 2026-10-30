@@ -1,0 +1,31 @@
+{
+  "name": "Small sample (3 classes)",
+  "days": ["Mon", "Tue", "Wed", "Thu", "Fri"],
+  "periods_per_day": 6,
+  "break_periods": [3],
+  "subjects": [
+    {"code": "CS201", "name": "Artificial Intelligence", "hours": 4, "type": "theory"},
+    {"code": "CS202", "name": "Database Systems", "hours": 3, "type": "theory"},
+    {"code": "CS203", "name": "Computer Networks", "hours": 3, "type": "theory"},
+    {"code": "CS204", "name": "AI Lab", "hours": 4, "type": "lab"}
+  ],
+  "teachers": [
+    {"name": "Prof. Sharma", "subjects": ["CS201", "CS204"], "unavailable": [], "max_load": 14, "avoid_periods": [1]},
+    {"name": "Prof. Verma", "subjects": ["CS202"], "unavailable": ["Fri-5"], "max_load": 12, "avoid_periods": []},
+    {"name": "Prof. Gupta", "subjects": ["CS203"], "unavailable": [], "max_load": 12, "avoid_periods": []},
+    {"name": "Dr. Mehta", "subjects": ["CS201"], "unavailable": [], "max_load": 10, "avoid_periods": []},
+    {"name": "Dr. Ray", "subjects": ["CS204"], "unavailable": [], "max_load": 10, "avoid_periods": []},
+    {"name": "Prof. Singh", "subjects": ["CS202", "CS203"], "unavailable": [], "max_load": 14, "avoid_periods": []}
+  ],
+  "classes": [
+    {"name": "Batch_A", "strength": 40, "subjects": ["CS201", "CS202", "CS203", "CS204"], "lunch_period": 4},
+    {"name": "Batch_B", "strength": 35, "subjects": ["CS201", "CS202", "CS204"], "lunch_period": 4},
+    {"name": "Batch_C", "strength": 45, "subjects": ["CS201", "CS203", "CS204"], "lunch_period": 4}
+  ],
+  "rooms": [
+    {"name": "Room_101", "capacity": 50, "type": "classroom"},
+    {"name": "Room_102", "capacity": 40, "type": "classroom"},
+    {"name": "Lab_A", "capacity": 50, "type": "lab"},
+    {"name": "Lab_B", "capacity": 45, "type": "lab"}
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "name": "Large sample (8 classes)",
+  "days": ["Mon", "Tue", "Wed", "Thu", "Fri"],
+  "periods_per_day": 7,
+  "break_periods": [4],
+  "subjects": [
+    {"code": "CS301", "name": "Machine Learning", "hours": 4, "type": "theory"},
+    {"code": "CS302", "name": "Operating Systems", "hours": 3, "type": "theory"},
+    {"code": "CS303", "name": "Software Engineering", "hours": 3, "type": "theory"},
+    {"code": "CS304", "name": "Compiler Design", "hours": 3, "type": "theory"},
+    {"code": "CS305", "name": "Web Development", "hours": 2, "type": "theory"},
+    {"code": "CS306", "name": "Machine Learning Lab", "hours": 4, "type": "lab"},
+    {"code": "CS307", "name": "Operating Systems Lab", "hours": 4, "type": "lab"}
+  ],
+  "teachers": [
+    {"name": "Dr. Akash", "subjects": ["CS301", "CS306"], "unavailable": [], "max_load": 16, "avoid_periods": [1]},
+    {"name": "Prof. Bhavna", "subjects": ["CS302", "CS307"], "unavailable": [], "max_load": 16, "avoid_periods": []},
+    {"name": "Dr. Chitranjan", "subjects": ["CS303"], "unavailable": [], "max_load": 12, "avoid_periods": []},
+    {"name": "Prof. Divya", "subjects": ["CS304"], "unavailable": [], "max_load": 12, "avoid_periods": []},
+    {"name": "Mr. Eeshan", "subjects": ["CS305"], "unavailable": [], "max_load": 12, "avoid_periods": []},
+    {"name": "Dr. Farhan", "subjects": ["CS301"], "unavailable": [], "max_load": 12, "avoid_periods": []},
+    {"name": "Prof. Geeta", "subjects": ["CS302"], "unavailable": [], "max_load": 12, "avoid_periods": []},
+    {"name": "Dr. Hari", "subjects": ["CS303", "CS304"], "unavailable": [], "max_load": 14, "avoid_periods": []},
+    {"name": "Mrs. Isha", "subjects": ["CS305"], "unavailable": [], "max_load": 10, "avoid_periods": []},
+    {"name": "Dr. Jatin", "subjects": ["CS306"], "unavailable": [], "max_load": 12, "avoid_periods": []},
+    {"name": "Prof. Kavita", "subjects": ["CS307"], "unavailable": [], "max_load": 12, "avoid_periods": []},
+    {"name": "Mr. Lokesh", "subjects": ["CS301", "CS303"], "unavailable": [], "max_load": 14, "avoid_periods": []},
+    {"name": "Dr. Manoj", "subjects": ["CS302", "CS304"], "unavailable": [], "max_load": 14, "avoid_periods": []},
+    {"name": "Prof. Nidhi", "subjects": ["CS305", "CS301"], "unavailable": [], "max_load": 14, "avoid_periods": []},
+    {"name": "Dr. Ojas", "subjects": ["CS304", "CS303"], "unavailable": [], "max_load": 12, "avoid_periods": []}
+  ],
+  "classes": [
+    {"name": "CSE_SecA", "strength": 60, "subjects": ["CS301", "CS302", "CS303", "CS304", "CS306"], "lunch_period": 4},
+    {"name": "CSE_SecB", "strength": 55, "subjects": ["CS301", "CS302", "CS303", "CS305", "CS307"], "lunch_period": 4},
+    {"name": "ECE_SecA", "strength": 50, "subjects": ["CS301", "CS303", "CS304", "CS305", "CS306"], "lunch_period": 4},
+    {"name": "ECE_SecB", "strength": 48, "subjects": ["CS302", "CS303", "CS304", "CS305", "CS307"], "lunch_period": 4},
+    {"name": "IT_SecA", "strength": 58, "subjects": ["CS301", "CS302", "CS304", "CS305", "CS306"], "lunch_period": 4},
+    {"name": "IT_SecB", "strength": 52, "subjects": ["CS301", "CS302", "CS303", "CS304", "CS307"], "lunch_period": 4},
+    {"name": "AI_SecA", "strength": 45, "subjects": ["CS301", "CS302", "CS303", "CS305", "CS306"], "lunch_period": 4},
+    {"name": "AI_SecB", "strength": 42, "subjects": ["CS301", "CS303", "CS304", "CS305", "CS307"], "lunch_period": 4}
+  ],
+  "rooms": [
+    {"name": "LH_101", "capacity": 65, "type": "classroom"},
+    {"name": "LH_102", "capacity": 60, "type": "classroom"},
+    {"name": "LH_103", "capacity": 55, "type": "classroom"},
+    {"name": "LH_104", "capacity": 50, "type": "classroom"},
+    {"name": "Central_AI_Lab", "capacity": 65, "type": "lab"},
+    {"name": "Systems_Lab", "capacity": 60, "type": "lab"},
+    {"name": "Network_Lab", "capacity": 55, "type": "lab"},
+    {"name": "Hardware_Lab", "capacity": 50, "type": "lab"}
+  ]
+}
