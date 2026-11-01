@@ -1,0 +1,7 @@
+name,subjects,unavailable,max_load,avoid_periods
+Prof. Sharma,"CS201,CS204",,14,1
+Prof. Verma,CS202,Fri-5,12,
+Prof. Gupta,CS203,,12,
+Dr. Mehta,CS201,,10,
+Dr. Ray,CS204,,10,
+Prof. Singh,"CS202,CS203",,14,

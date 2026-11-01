@@ -1,0 +1,9 @@
+name,capacity,type
+LH_101,65,classroom
+LH_102,60,classroom
+LH_103,55,classroom
+LH_104,50,classroom
+Central_AI_Lab,65,lab
+Systems_Lab,60,lab
+Network_Lab,55,lab
+Hardware_Lab,50,lab

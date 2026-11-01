@@ -1,0 +1,19 @@
+Type,ID/Name,Property_1,Property_2,Property_3,Property_4
+Metadata,Small sample (3 classes),"Days: Mon, Tue, Wed, Thu, Fri",Periods: 6,Breaks: 3,
+Subject,CS201,Artificial Intelligence,Hours: 4,Type: theory,
+Subject,CS202,Database Systems,Hours: 3,Type: theory,
+Subject,CS203,Computer Networks,Hours: 3,Type: theory,
+Subject,CS204,AI Lab,Hours: 4,Type: lab,
+Teacher,Prof. Sharma,"Subjects: CS201, CS204",Max Load: 14,Unavailable: None,Avoid Periods: 1
+Teacher,Prof. Verma,Subjects: CS202,Max Load: 12,Unavailable: Fri-5,Avoid Periods: None
+Teacher,Prof. Gupta,Subjects: CS203,Max Load: 12,Unavailable: None,Avoid Periods: None
+Teacher,Dr. Mehta,Subjects: CS201,Max Load: 10,Unavailable: None,Avoid Periods: None
+Teacher,Dr. Ray,Subjects: CS204,Max Load: 10,Unavailable: None,Avoid Periods: None
+Teacher,Prof. Singh,"Subjects: CS202, CS203",Max Load: 14,Unavailable: None,Avoid Periods: None
+Class/Batch,Batch_A,Strength: 40,"Subjects: CS201, CS202, CS203, CS204",Lunch Period: 4,
+Class/Batch,Batch_B,Strength: 35,"Subjects: CS201, CS202, CS204",Lunch Period: 4,
+Class/Batch,Batch_C,Strength: 45,"Subjects: CS201, CS203, CS204",Lunch Period: 4,
+Room,Room_101,Capacity: 50,Type: classroom,,
+Room,Room_102,Capacity: 40,Type: classroom,,
+Room,Lab_A,Capacity: 50,Type: lab,,
+Room,Lab_B,Capacity: 45,Type: lab,,

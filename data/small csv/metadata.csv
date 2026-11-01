@@ -1,0 +1,5 @@
+setting,value
+name,Small sample (3 classes)
+days,"Mon,Tue,Wed,Thu,Fri"
+periods_per_day,6
+break_periods,3

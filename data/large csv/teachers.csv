@@ -1,0 +1,16 @@
+name,subjects,unavailable,max_load,avoid_periods
+Dr. Akash,"CS301, CS306",,16,1
+Prof. Bhavna,"CS302, CS307",,16,
+Dr. Chitranjan,CS303,,12,
+Prof. Divya,CS304,,12,
+Mr. Eeshan,CS305,,12,
+Dr. Farhan,CS301,,12,
+Prof. Geeta,CS302,,12,
+Dr. Hari,"CS303, CS304",,14,
+Mrs. Isha,CS305,,10,
+Dr. Jatin,CS306,,12,
+Prof. Kavita,CS307,,12,
+Mr. Lokesh,"CS301, CS303",,14,
+Dr. Manoj,"CS302, CS304",,14,
+Prof. Nidhi,"CS305, CS301",,14,
+Dr. Ojas,"CS304, CS303",,12,
