@@ -323,33 +323,51 @@ def show_result(p, res):
                 f'{"Valid timetable" if ok else f"{res.hard} hard violation(s)"}</span> '
                 f'&nbsp;{html.escape(res.algorithm)} · {html.escape(str(res.info.get("status", "")))}', unsafe_allow_html=True)
     st.write("")
+    
     steps = "Nodes expanded" if res.algorithm.startswith("Backtracking") else "Iterations"
-    cards([("Time taken", f"{res.seconds:.3f} s", ""), (steps, f"{res.steps:,}", ""),
-           ("Hard violations", res.hard, "must be 0", "good" if res.hard == 0 else "bad"),
-           ("Soft penalty", res.soft, "lower is nicer"), ("Total cost", f"{res.cost:,}", "1000 x hard + soft")])
+    cards([
+        ("Time taken", f"{res.seconds:.3f} s", ""), 
+        (steps, f"{res.steps:,}", ""), 
+        ("Hard violations", res.hard, "must be 0", "good" if res.hard == 0 else "bad"), 
+        ("Soft penalty", res.soft, "lower is nicer"), 
+        ("Total cost", f"{res.cost:,}", "1000 x hard + soft")
+    ])
     st.write("")
+    
     a, b = st.columns(2)
     with a:
         st.markdown("**Soft constraints**")
         parts = res.analysis.soft_parts
-        st.dataframe(pd.DataFrame([
+        
+        # Define the structural data
+        df_soft = pd.DataFrame([
             {"constraint": "S1 gaps in a class's day", "count": parts["S1"], "weight": WEIGHTS["S1"]},
             {"constraint": "S2 same subject twice a day", "count": parts["S2"], "weight": WEIGHTS["S2"]},
             {"constraint": "S3 lab periods consecutive", "count": 0, "weight": "built in"},
             {"constraint": "S4 teacher preferences", "count": parts["S4"], "weight": WEIGHTS["S4"]},
-            {"constraint": "S5 over 2 lectures in a row", "count": parts["S5"], "weight": WEIGHTS["S5"]}]),
-            hide_index=True)
+            {"constraint": "S5 over 2 lectures in a row", "count": parts["S5"], "weight": WEIGHTS["S5"]}
+        ])
+        
+        # Cast mixed columns to string format to satisfy Arrow compatibility limits
+        df_soft["count"] = df_soft["count"].astype(str)
+        df_soft["weight"] = df_soft["weight"].astype(str)
+        
+        st.dataframe(df_soft, hide_index=True)
+        
     with b:
         st.markdown("**Search details**")
         info = {k: v for k, v in res.info.items() if k != "status"}
         st.dataframe(pd.DataFrame({"measure": list(info), "value": [str(v) for v in info.values()]}), hide_index=True)
+        
     if res.trace and len(res.trace) > 2:
         st.markdown("**Cost against iterations**")
         trace_chart(res)
+        
     if res.analysis.issues:
         with st.expander(f"Hard-constraint violations ({res.hard})", expanded=True):
             for it in res.analysis.issues[:40]:
                 st.write(f"**{it['code']}** {HARD_NAMES[it['code']]}: {it['text']}")
+
 
 def page_generate():
     ss, p = st.session_state, st.session_state.problem
