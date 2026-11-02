@@ -21,5 +21,11 @@ Install the dependencies used by the project (`streamlit`, `pandas`, and `openpy
 ```bash
 streamlit run app.py
 ```
+```
+if this doesn't work
+try: python -m streamlit run app.py
+```
 
 The dataset files were not among the Python files uploaded for this edit, so they are not included in this compact archive.
+While using json format file of dataset format of data should match as prescribe in data folder.
+While using csv file 4 different files should be upload "classes.csv, subjects.csv,rooms.csv,teachers.csv" format should match individual format of each 
